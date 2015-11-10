@@ -1,0 +1,26 @@
+Here you'll find BitTorrent links to the public database of votes made
+through OpenPresPoll.  You can use this data to derive your own
+statistics and graphs. This file is updated daily.
+
+There are two types of files, diffs and snapshots. A diff is uploaded
+once a day and contains the votes that happened during the previous
+day.  A snapshot contains all the vote data made up to that day.
+
+The diffs will be seeded by our root server forever. Only the latest
+snapshot will be seeded by our root server, other snapshots may
+seeded by volunteers indefinitely. Snapshots are provided as a
+convenience, you can derive your own snapshots using the entire
+history of diffs.
+
+Both diffs and snapshots are in CSV form. Parsing should be relatively
+straightforward. The "correlate_id" columns is an obfuscated ID for
+the Twitter user who made the vote. If a user makes multiple votes,
+you can update their latest vote using "correlate_id."
+
+If you're a regular user of BitTorrent, please seed these files!
+
+<type> <day> <sha256> <magnet-link>
+------------------------------------------------------------------------
+diff 2015-11-16 b488e9bed673d5875f0778d111d9d0dd00b6b37486e151407c9427cf30eeca6f magnet:?xt=urn:btih:90286bce2d05d325c0fe3f2c65a1dc633f597c01&dn=diff-2015-11-16.csv.bz2&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969
+diff 2015-11-16 b488e9bed673d5875f0778d111d9d0dd00b6b37486e151407c9427cf30eeca6f magnet:?xt=urn:btih:90286bce2d05d325c0fe3f2c65a1dc633f597c01&dn=diff-2015-11-16.csv.bz2&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969
+diff 2015-11-16 b488e9bed673d5875f0778d111d9d0dd00b6b37486e151407c9427cf30eeca6f magnet:?xt=urn:btih:90286bce2d05d325c0fe3f2c65a1dc633f597c01&dn=diff-2015-11-16.csv.bz2&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969
