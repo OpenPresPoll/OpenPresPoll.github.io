@@ -22,3 +22,4 @@ If you're a regular user of BitTorrent, please seed these files!
 <type> <day> <sha256> <magnet-link>
 ------------------------------------------------------------------------
 diff 2015-11-17 a61ae7a920a5fcd2fd5f0d4c205c83c566b80f02145944ccab1f6bf3022bc7ed magnet:?xt=urn:btih:019daf7defa7dfee21d1ccf93632110cc4d17a00&dn=diff-2015-11-17.csv.bz2&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969
+diff 2015-11-18 a61ae7a920a5fcd2fd5f0d4c205c83c566b80f02145944ccab1f6bf3022bc7ed magnet:?xt=urn:btih:230d9a4853e23bb6afe82d6655181e4262bae2a6&dn=diff-2015-11-18.csv.bz2&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969
