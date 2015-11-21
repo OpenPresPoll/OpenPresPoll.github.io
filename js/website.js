@@ -8466,7 +8466,7 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
       $('#vote-modal').modal('show');
     };
     $('#public-btn').on('click', function(event) {
-      var candidate_name, tweet_text, twitter_handle, vote_enum;
+      var candidate_name, trailing, tweet_text, twitter_handle, vote_enum;
       twitter_handle = selected_candidate.twitter_handle;
       tweet_text = '.@OpenPresPoll I\'m voting for ';
       if (mutil.is_null(twitter_handle)) {
@@ -8477,7 +8477,11 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
       }
       vote_enum = candidate_enum + 1;
       tweet_text += ' %vote-' + vote_enum + '%';
-      tweet_text += ' http://OpenPresPoll.github.io/';
+      trailing = '';
+      if (selected_candidate.last_name.toLowerCase() === 'trump') {
+        trailing = '_';
+      }
+      tweet_text += ' http://OpenPresPoll.github.io/' + encodeURIComponent(selected_candidate.last_name.toLowerCase()) + trailing;
       $('#vote-modal').modal('hide');
       window.location = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet_text);
     });
