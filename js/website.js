@@ -7584,6 +7584,10 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
     return lastIndex !== -1 && lastIndex === position;
   };
 
+  exports.count = function(str, searchString) {
+    return str.split(searchString).length - 1;
+  };
+
 }).call(this);
 
 },{"babel/polyfill":216}],30:[function(require,module,exports){
@@ -8478,7 +8482,7 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
       vote_enum = candidate_enum + 1;
       tweet_text += ' %vote-' + vote_enum + '%';
       trailing = '';
-      if (selected_candidate.last_name.toLowerCase() === 'trump') {
+      if (selected_candidate.last_name.toLowerCase() === 'trump' || selected_candidate.last_name.toLowerCase() === 'clinton' || selected_candidate.last_name.toLowerCase() === 'sanders') {
         trailing = '_';
       }
       tweet_text += ' http://OpenPresPoll.github.io/' + encodeURIComponent(selected_candidate.last_name.toLowerCase()) + trailing;
