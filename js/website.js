@@ -8394,11 +8394,17 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
 
   on_page_loaded = function(event) {
     var candidate;
-    var candidate, candidate_enum, candidates_iter, enum_, err, extra_class, idx, new_elt, new_link, new_link_container, new_pic, new_pic_container, new_pic_link, open_modal, parsed_url, root_elt, selected_candidate, vote_enum, _didIteratorError2, _didIteratorError3, _iterator2, _iterator3, _iteratorError2, _iteratorError3, _iteratorNormalCompletion2, _iteratorNormalCompletion3, _step2, _step2$value, _step3, _step3$value;
+    var candidate, candidate_enum, candidates_iter, create_to_vote, enum_, err, extra_class, idx, new_elt, new_link, new_link_container, new_pic, new_pic_container, new_pic_link, open_modal, parsed_url, root_elt, selected_candidate, to_vote, vote_enum, _didIteratorError2, _didIteratorError3, _iterator2, _iterator3, _iteratorError2, _iteratorError3, _iteratorNormalCompletion2, _iteratorNormalCompletion3, _step2, _step2$value, _step3, _step3$value;
     root_elt = document.getElementById('candidates');
     open_modal = void 0;
     candidates_iter = Array.from(candidates.candidates.entries());
     mutil.shuffle(candidates_iter);
+    create_to_vote = function(candidate_enum) {
+      return function(event) {
+        open_modal(candidate_enum);
+        return false;
+      };
+    };
     _iteratorNormalCompletion2 = true;
     _didIteratorError2 = false;
     _iteratorError2 = void 0;
@@ -8414,13 +8420,8 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
           continue;
         }
         new_link = document.createElement('button');
-        $(new_link).on('click', function(event) {
-          var button, candidate_enum;
-          button = $(event.target);
-          candidate_enum = parseInt(button.data('candidate'));
-          open_modal(candidate_enum);
-        });
-        new_link.setAttribute('data-candidate', enum_.toString());
+        to_vote = create_to_vote(enum_);
+        $(new_link).on('click', to_vote);
         extra_class = candidate.party === 'Democrat' ? 'dem-button' : 'gop-button';
         new_link.setAttribute('class', 'btn ' + extra_class);
         new_link.innerHTML = 'Vote ' + candidate.first_name + ' ' + candidate.last_name;
@@ -8431,8 +8432,9 @@ module.exports=[768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780,
         new_pic.setAttribute('src', 'images/' + candidate.first_name.toLowerCase() + '-' + candidate.last_name.toLowerCase() + '.jpg');
         new_pic.setAttribute('class', 'headshot');
         new_pic_link = document.createElement('a');
-        new_pic_link.setAttribute('href', candidate.page);
+        new_pic_link.setAttribute('href', '#');
         new_pic_link.appendChild(new_pic);
+        $(new_pic_link).on('click', to_vote);
         new_pic_container = document.createElement('div');
         new_pic_container.appendChild(new_pic_link);
         new_elt = document.createElement('div');
