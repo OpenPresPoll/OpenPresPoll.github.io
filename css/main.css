@@ -84,6 +84,17 @@ header a, header a:hover {
     color: #fff;
 }
 
+.indy-button {
+    background-color: #aaa;
+    border: 1px solid #888;
+    color: #fff;
+}
+
+.indy-button:hover {
+    background-color: #888;
+    color: #fff;
+}
+
 .public-or-private-choice {
     text-align: center;
 }
