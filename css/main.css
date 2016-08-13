@@ -84,15 +84,26 @@ header a, header a:hover {
     color: #fff;
 }
 
-.indy-button, .lib-button {
+.indy-button {
     background-color: #aaa;
     border: 1px solid #888;
     color: #fff;
 }
 
-.indy-button:hover, .lib-button:hover {
+.indy-button:hover {
     background-color: #888;
     color: #fff;
+}
+
+.lib-button {
+    background-color: #ffda2d;
+    border: 1px solid #fed105;
+    color: #999;
+}
+
+.lib-button:hover {
+    background-color: #fed105;
+    color: #999;
 }
 
 .green-button {
